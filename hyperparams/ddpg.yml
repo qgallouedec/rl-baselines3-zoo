@@ -149,3 +149,115 @@ Swimmer-v3:
   gamma: 0.9999
   train_freq: 1
   gradient_steps: 1
+
+AcrobotSwingupDMC-v0: &dmc-defaults
+  policy: 'MlpPolicy'
+  n_timesteps: !!float 1e6
+  batch_size: 64
+  policy_kwargs: "dict(net_arch=dict(pi=[300, 200], qf=[400, 300]))" 
+  learning_rate: !!float 1e-4
+  gamma: 0.99
+  noise_type: 'ornstein-uhlenbeck'
+  noise_std: 0.3
+
+AcrobotSwingupSparseDMC-v0: 
+    <<: *dmc-defaults
+
+BallInCupDMC-v0: 
+    <<: *dmc-defaults
+
+CartpoleDMC-v0: 
+    <<: *dmc-defaults
+
+CartpoleSparseDMC-v0: 
+    <<: *dmc-defaults
+
+CartpoleSwingupDMC-v0: 
+    <<: *dmc-defaults
+
+CartpoleSwingupSparseDMC-v0: 
+    <<: *dmc-defaults
+
+CartpoleTwoPolesDMC-v0: 
+    <<: *dmc-defaults
+
+CartpoleThreePolesDMC-v0: 
+    <<: *dmc-defaults
+
+CheetahDMC-v0: 
+    <<: *dmc-defaults
+
+FingerSpinDMC-v0: 
+    <<: *dmc-defaults
+
+FingerTurnEasyDMC-v0: 
+    <<: *dmc-defaults
+
+FingerTurnHardDMC-v0: 
+    <<: *dmc-defaults
+
+FishSwimDMC-v0: 
+    <<: *dmc-defaults
+
+FishUprightDMC-v0: 
+    <<: *dmc-defaults
+
+HopperDMC-v0: 
+    <<: *dmc-defaults
+
+HopperStandDMC-v0: 
+    <<: *dmc-defaults
+
+HumanoidRunDMC-v0: 
+    <<: *dmc-defaults
+
+HumanoidStandDMC-v0: 
+    <<: *dmc-defaults
+
+HumanoidWalkDMC-v0: 
+    <<: *dmc-defaults
+
+HumanoidRunPureStateDMC-v0: 
+    <<: *dmc-defaults
+
+ManipulatorBringBallDMC-v0: 
+    <<: *dmc-defaults
+
+ManipulatorBringPegDMC-v0: 
+    <<: *dmc-defaults
+
+ManipulatorInsertBallDMC-v0: 
+    <<: *dmc-defaults
+
+ManipulatorInsertPegDMC-v0: 
+    <<: *dmc-defaults
+
+PendulumDMC-v0: 
+    <<: *dmc-defaults
+
+PointMassDMC-v0: 
+    <<: *dmc-defaults
+
+PointMassHardDMC-v0: 
+    <<: *dmc-defaults
+
+ReacherDMC-v0: 
+    <<: *dmc-defaults
+
+ReacherHardDMC-v0: 
+    <<: *dmc-defaults
+
+Swimmer15DMC-v0: 
+    <<: *dmc-defaults
+
+Swimmer6DMC-v0: 
+    <<: *dmc-defaults
+
+WalkerRunDMC-v0: 
+    <<: *dmc-defaults
+
+WalkerStandDMC-v0: 
+    <<: *dmc-defaults
+
+WalkerDMC-v0: 
+    <<: *dmc-defaults
