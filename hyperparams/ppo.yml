@@ -559,7 +559,7 @@ assembly-v2: &metaworld-defaults
   learning_rate: 0.0002
   n_envs: 8
   n_steps: 500
-  n_timesteps: 10e6
+  n_timesteps: !!float 10e6
   normalize: true
   target_kl: 0.03
   policy: 'MlpPolicy'
